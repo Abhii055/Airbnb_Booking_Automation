@@ -109,8 +109,6 @@ public class Airbnb_Test {
 
 		WebElement entryDate = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@data-testid='calendar-day-15/07/2024']")));
 		entryDate.click();
-		//		js.executeScript("arguments[0].scrollIntoView(true);", entryDate);
-		//		js.executeScript("arguments[0].click();", entryDate);
 
 		//=====--------------------------DATE - check_OUT-------------------------
 		WebElement checkInElementExit = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@data-testid, 'structured-search-input-field-split-dates-1')]")));
@@ -122,31 +120,51 @@ public class Airbnb_Test {
 
 
 		driver.findElement(By.xpath("//span[@class='t1dqvypu atm_9s_1ulexfb atm_vy_1osqo2v atm_e2_1osqo2v atm_jb_uuw12j atm_2w_1egmwxu atm_k4_idpfg4 atm_uc_kn5pbq atm_2g_1mygper atm_k4_kb7nvz_1nos8r atm_uc_yz1f4_csw3t1 atm_k4_idpfg4_csw3t1 atm_tr_kftzq4_csw3t1 dir dir-ltr']")).click();
-
-
-
-
 	}
+	
 	@Test(dependsOnMethods= "setLocation")
-	public void Booking() {
+	public void applyingFilter() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		// Filter set(Amazing view)
 		WebElement addingFilter = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@data-testid='category-item--Amazing views--unchecked']")));
 		addingFilter.click();	
+	}
+	
+	@Test(dependsOnMethods="applyingFilter")
+	public void bookingFirstHotel() {
 
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		//selecting first hotel
 		WebElement booking = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='lxq01kf atm_9s_1txwivl atm_am_kyuy1d atm_ar_d67k9l l1tup9az atm_1p4glcj_1bp4okc dir dir-ltr']")));
-		booking.click();	
+		booking.click();
+	}
+	
+	@Test(dependsOnMethods="bookingFirstHotel")
+	public void changeLanguage()throws InterruptedException {
+		//trying to change the language	
 
-		WebElement Reserve = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@data-testid='homes-pdp-cta-btn']/span[@class='tb4j57x atm_mk_stnw88 atm_tk_idpfg4 atm_fq_idpfg4 atm_n3_idpfg4 atm_6i_idpfg4 atm_vy_1osqo2v atm_e2_1osqo2v atm_ks_15vqwwr atm_ib_1yr6ypa atm_ia_1yr6ypa atm_5j_t09oo2 dir dir-ltr']/span[@class='tmel3e0 atm_9s_1ulexfb atm_vy_1osqo2v atm_e2_1osqo2v atm_jb_uuw12j atm_2w_1egmwxu atm_k4_idpfg4 atm_uc_kn5pbq atm_2g_1mygper atm_k4_kb7nvz_1nos8r atm_uc_yz1f4_csw3t1 atm_k4_idpfg4_csw3t1 atm_tr_kftzq4_csw3t1 atm_2g_glywfm_1o5j5ji atm_2g_181pwnh__1vlbm2j dir dir-ltr']")));
-		Reserve.click();	
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		WebElement languageCurrencyButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='lloffz7 atm_h_1h6ojuz atm_9s_1txwivl atm_e2_1osqo2v atm_mk_h2mmj6 atm_wq_kb7nvz dir dir-ltr']/div[@class='_z5mecy']")));
+		Thread.sleep(10000);
+		languageCurrencyButton.click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='p1psejvv atm_9s_1bgihbq dir dir-ltr']/div[@class='di536pa atm_ks_zryt35 atm_mk_h2mmj6 atm_26_1qwqy05 atm_vy_auwlz6 atm_j3_auwlz6 atm_iy_1osqo2v atm_9s_1txwivl atm_ar_1bp4okc atm_70_rgs8xj atm_6a_kitwna atm_6c_kitwna atm_16_kb7nvz atm_12_1hrf63d atm_1c_1kxd9fs atm_1k_1v897lg atm_y_t52gbv atm_tw_uaqxkr atm_im2n7a_1osqo2v atm_189k8xb_1osqo2v atm_ks_15vqwwr__1yj3dog atm_kd_glywfm_pfnrn2 atm_vy_1osqo2v__oggzyc atm_5j_kitwna__oggzyc atm_16_kb7nvz__oggzyc atm_12_1hrf63d__oggzyc atm_1c_1o0sogo__oggzyc atm_y_vegxqt__oggzyc atm_1k_so3mv5__oggzyc atm_tw_uaqxkr__oggzyc atm_im2n7a_n7od8j__oggzyc atm_189k8xb_n7od8j__oggzyc atm_1c_18bdofy__1rrf6b5 atm_y_t0utr__1rrf6b5 atm_1k_1ar7sfh__1rrf6b5 atm_j3_6tyhld__oggzyc dclclpo dir dir-ltr']")));
+		driver.findElement(By.xpath("//div[text()='Azərbaycan']")).click();
 
-		//		WebElement increaseGuest = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@data-testid='stepper-adults-increase-button']")));
-		//		increaseGuest.click();
-
+		
 	}
 
 
+	@Test(dependsOnMethods ="changeLanguage")
+	public void reserveHotel() {
 
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement Reserve = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='lloffz7 atm_h_1h6ojuz atm_9s_1txwivl atm_e2_1osqo2v atm_mk_h2mmj6 atm_wq_kb7nvz dir dir-ltr']/div[@class='_z5mecy']")));
+		Reserve.click();	
+
+		WebElement increaseGuest = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@data-testid='stepper-adults-increase-button']")));
+		increaseGuest.click();
+	}
+	
 	//    @AfterClass
 	public void tearDown() {
 		if (driver != null) {
