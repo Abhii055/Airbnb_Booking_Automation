@@ -107,7 +107,7 @@ public class Airbnb_Test {
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@data-testid='structured-search-input-field-dates-panel']")));
 
-		WebElement entryDate = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@data-testid='calendar-day-15/07/2024']")));
+		WebElement entryDate = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@data-testid='calendar-day-19/07/2024']")));
 		entryDate.click();
 
 		//=====--------------------------DATE - check_OUT-------------------------
@@ -115,7 +115,7 @@ public class Airbnb_Test {
 		checkInElementExit.click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@data-testid='structured-search-input-field-dates-panel']")));
 
-		WebElement exitDate = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@data-testid='calendar-day-20/07/2024']")));
+		WebElement exitDate = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@data-testid='calendar-day-27/07/2024']")));
 		exitDate.click();
 
 
@@ -129,17 +129,7 @@ public class Airbnb_Test {
 		WebElement addingFilter = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@data-testid='category-item--Amazing views--unchecked']")));
 		addingFilter.click();	
 	}
-	
 	@Test(dependsOnMethods="applyingFilter")
-	public void bookingFirstHotel() {
-
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		//selecting first hotel
-		WebElement booking = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='lxq01kf atm_9s_1txwivl atm_am_kyuy1d atm_ar_d67k9l l1tup9az atm_1p4glcj_1bp4okc dir dir-ltr']")));
-		booking.click();
-	}
-	
-	@Test(dependsOnMethods="bookingFirstHotel")
 	public void changeLanguage()throws InterruptedException {
 		//trying to change the language	
 
@@ -152,9 +142,16 @@ public class Airbnb_Test {
 
 		
 	}
+	
+	@Test(dependsOnMethods="changeLanguage")
+	public void bookingFirstHotel() {
 
-
-	@Test(dependsOnMethods ="changeLanguage")
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		//selecting first hotel
+		WebElement booking = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='lxq01kf atm_9s_1txwivl atm_am_kyuy1d atm_ar_d67k9l l1tup9az atm_1p4glcj_1bp4okc dir dir-ltr']")));
+		booking.click();
+	}
+	@Test(dependsOnMethods ="bookingFirstHotel")
 	public void reserveHotel() {
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -164,6 +161,7 @@ public class Airbnb_Test {
 		WebElement increaseGuest = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@data-testid='stepper-adults-increase-button']")));
 		increaseGuest.click();
 	}
+	
 	
 	//    @AfterClass
 	public void tearDown() {
