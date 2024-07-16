@@ -138,7 +138,9 @@ public class Airbnb_Test {
 		Thread.sleep(10000);
 		languageCurrencyButton.click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='p1psejvv atm_9s_1bgihbq dir dir-ltr']/div[@class='di536pa atm_ks_zryt35 atm_mk_h2mmj6 atm_26_1qwqy05 atm_vy_auwlz6 atm_j3_auwlz6 atm_iy_1osqo2v atm_9s_1txwivl atm_ar_1bp4okc atm_70_rgs8xj atm_6a_kitwna atm_6c_kitwna atm_16_kb7nvz atm_12_1hrf63d atm_1c_1kxd9fs atm_1k_1v897lg atm_y_t52gbv atm_tw_uaqxkr atm_im2n7a_1osqo2v atm_189k8xb_1osqo2v atm_ks_15vqwwr__1yj3dog atm_kd_glywfm_pfnrn2 atm_vy_1osqo2v__oggzyc atm_5j_kitwna__oggzyc atm_16_kb7nvz__oggzyc atm_12_1hrf63d__oggzyc atm_1c_1o0sogo__oggzyc atm_y_vegxqt__oggzyc atm_1k_so3mv5__oggzyc atm_tw_uaqxkr__oggzyc atm_im2n7a_n7od8j__oggzyc atm_189k8xb_n7od8j__oggzyc atm_1c_18bdofy__1rrf6b5 atm_y_t0utr__1rrf6b5 atm_1k_1ar7sfh__1rrf6b5 atm_j3_6tyhld__oggzyc dclclpo dir dir-ltr']")));
-		driver.findElement(By.xpath("//div[text()='Azərbaycan']")).click();
+		driver.findElement(By.xpath("//div[text()='भारत']")).click();
+
+		
 
 		
 	}
@@ -151,16 +153,27 @@ public class Airbnb_Test {
 		WebElement booking = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='lxq01kf atm_9s_1txwivl atm_am_kyuy1d atm_ar_d67k9l l1tup9az atm_1p4glcj_1bp4okc dir dir-ltr']")));
 		booking.click();
 	}
-	@Test(dependsOnMethods ="bookingFirstHotel")
-	public void reserveHotel() {
-
+	
+	@Test(dependsOnMethods = "bookingFirstHotel")
+	public void closingDialogBox() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		WebElement Reserve = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='lloffz7 atm_h_1h6ojuz atm_9s_1txwivl atm_e2_1osqo2v atm_mk_h2mmj6 atm_wq_kb7nvz dir dir-ltr']/div[@class='_z5mecy']")));
-		Reserve.click();	
-
-		WebElement increaseGuest = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@data-testid='stepper-adults-increase-button']")));
-		increaseGuest.click();
+		//selecting first hotel
+		Thread.sleep(10000);
+		driver.navigate().refresh();
+		
+		WebElement  btnClose= wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div/button/span[@class='i3tjjh1 atm_mk_h2mmj6 dir dir-ltr']")));
+		 btnClose.click();
 	}
+//	@Test(dependsOnMethods ="bookingFirstHotel")
+//	public void reserveHotel() {
+//
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//		WebElement Reserve = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='lloffz7 atm_h_1h6ojuz atm_9s_1txwivl atm_e2_1osqo2v atm_mk_h2mmj6 atm_wq_kb7nvz dir dir-ltr']/div[@class='_z5mecy']")));
+//		Reserve.click();	
+//
+//		WebElement increaseGuest = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@data-testid='stepper-adults-increase-button']")));
+//		increaseGuest.click();
+//	}
 	
 	
 	//    @AfterClass

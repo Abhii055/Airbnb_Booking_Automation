@@ -10,7 +10,7 @@
           <include name="applyingFilter"/>
           <include name="bookingFirstHotel"/>
           <include name="setLocation"/>
-          <include name="reserveHotel"/>
+          <include name="closingDialogBox"/>
           <include name="changeLanguage"/>
         </methods>
       </class> <!-- airbnb_testing.Airbnb_Test -->
