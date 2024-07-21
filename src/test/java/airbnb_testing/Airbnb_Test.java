@@ -57,8 +57,6 @@
 //
 //}
 
-
-
 package airbnb_testing;
 
 import java.time.Duration;
@@ -93,7 +91,7 @@ public class Airbnb_Test {
 
 	@Test(dependsOnMethods = "invokeBrowser")
 	public void setLocation() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
 		WebElement locationInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("bigsearch-query-location-input")));
 		locationInput.clear();
@@ -107,7 +105,7 @@ public class Airbnb_Test {
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@data-testid='structured-search-input-field-dates-panel']")));
 
-		WebElement entryDate = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@data-testid='calendar-day-19/07/2024']")));
+		WebElement entryDate = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@data-testid='calendar-day-23/07/2024']")));
 		entryDate.click();
 
 		//=====--------------------------DATE - check_OUT-------------------------
