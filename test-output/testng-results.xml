@@ -2,55 +2,55 @@
 <testng-results ignored="0" total="6" passed="5" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-21T12:31:04 IST" name="Default suite" finished-at="2024-07-21T12:31:45 IST" duration-ms="41218">
+  <suite started-at="2024-07-22T19:03:37 IST" name="Default suite" finished-at="2024-07-22T19:04:18 IST" duration-ms="41679">
     <groups>
     </groups>
-    <test started-at="2024-07-21T12:31:04 IST" name="Default test" finished-at="2024-07-21T12:31:45 IST" duration-ms="41218">
+    <test started-at="2024-07-22T19:03:37 IST" name="Default test" finished-at="2024-07-22T19:04:18 IST" duration-ms="41679">
       <class name="airbnb_testing.Airbnb_Test">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:airbnb_testing.Airbnb_Test@273444fe]" started-at="2024-07-21T12:31:04 IST" name="setUp" finished-at="2024-07-21T12:31:06 IST" duration-ms="2039" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:airbnb_testing.Airbnb_Test@273444fe]" started-at="2024-07-22T19:03:37 IST" name="setUp" finished-at="2024-07-22T19:03:39 IST" duration-ms="2211" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="invokeBrowser()[pri:0, instance:airbnb_testing.Airbnb_Test@273444fe]" started-at="2024-07-21T12:31:06 IST" name="invokeBrowser" finished-at="2024-07-21T12:31:11 IST" duration-ms="5125" status="PASS">
+        <test-method signature="invokeBrowser()[pri:0, instance:airbnb_testing.Airbnb_Test@273444fe]" started-at="2024-07-22T19:03:39 IST" name="invokeBrowser" finished-at="2024-07-22T19:03:45 IST" duration-ms="6443" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invokeBrowser -->
-        <test-method signature="setLocation()[pri:0, instance:airbnb_testing.Airbnb_Test@273444fe]" started-at="2024-07-21T12:31:11 IST" name="setLocation" finished-at="2024-07-21T12:31:14 IST" depends-on-methods="airbnb_testing.Airbnb_Test.invokeBrowser" duration-ms="2723" status="PASS">
+        <test-method signature="setLocation()[pri:0, instance:airbnb_testing.Airbnb_Test@273444fe]" started-at="2024-07-22T19:03:45 IST" name="setLocation" finished-at="2024-07-22T19:03:48 IST" depends-on-methods="airbnb_testing.Airbnb_Test.invokeBrowser" duration-ms="2845" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setLocation -->
-        <test-method signature="applyingFilter()[pri:0, instance:airbnb_testing.Airbnb_Test@273444fe]" started-at="2024-07-21T12:31:14 IST" name="applyingFilter" finished-at="2024-07-21T12:31:16 IST" depends-on-methods="airbnb_testing.Airbnb_Test.setLocation" duration-ms="1601" status="PASS">
+        <test-method signature="applyingFilter()[pri:0, instance:airbnb_testing.Airbnb_Test@273444fe]" started-at="2024-07-22T19:03:48 IST" name="applyingFilter" finished-at="2024-07-22T19:03:50 IST" depends-on-methods="airbnb_testing.Airbnb_Test.setLocation" duration-ms="1870" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- applyingFilter -->
-        <test-method signature="changeLanguage()[pri:0, instance:airbnb_testing.Airbnb_Test@273444fe]" started-at="2024-07-21T12:31:16 IST" name="changeLanguage" finished-at="2024-07-21T12:31:33 IST" depends-on-methods="airbnb_testing.Airbnb_Test.applyingFilter" duration-ms="17396" status="PASS">
+        <test-method signature="changeLanguage()[pri:0, instance:airbnb_testing.Airbnb_Test@273444fe]" started-at="2024-07-22T19:03:50 IST" name="changeLanguage" finished-at="2024-07-22T19:04:06 IST" depends-on-methods="airbnb_testing.Airbnb_Test.applyingFilter" duration-ms="16012" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- changeLanguage -->
-        <test-method signature="bookingFirstHotel()[pri:0, instance:airbnb_testing.Airbnb_Test@273444fe]" started-at="2024-07-21T12:31:33 IST" name="bookingFirstHotel" finished-at="2024-07-21T12:31:35 IST" depends-on-methods="airbnb_testing.Airbnb_Test.changeLanguage" duration-ms="1793" status="PASS">
+        <test-method signature="bookingFirstHotel()[pri:0, instance:airbnb_testing.Airbnb_Test@273444fe]" started-at="2024-07-22T19:04:06 IST" name="bookingFirstHotel" finished-at="2024-07-22T19:04:08 IST" depends-on-methods="airbnb_testing.Airbnb_Test.changeLanguage" duration-ms="1759" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bookingFirstHotel -->
-        <test-method signature="closingDialogBox()[pri:0, instance:airbnb_testing.Airbnb_Test@273444fe]" started-at="2024-07-21T12:31:35 IST" name="closingDialogBox" finished-at="2024-07-21T12:31:45 IST" depends-on-methods="airbnb_testing.Airbnb_Test.bookingFirstHotel" duration-ms="10450" status="FAIL">
+        <test-method signature="closingDialogBox()[pri:0, instance:airbnb_testing.Airbnb_Test@273444fe]" started-at="2024-07-22T19:04:08 IST" name="closingDialogBox" finished-at="2024-07-22T19:04:18 IST" depends-on-methods="airbnb_testing.Airbnb_Test.bookingFirstHotel" duration-ms="10427" status="FAIL">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: (//span[@class='i3tjjh1 atm_mk_h2mmj6 dir dir-ltr'])[1] (tried for 10 second(s) with 500 milliseconds interval)
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='c1lbtiq8 atm_mk_stnw88 atm_9s_1txwivl atm_fq_1tcgj5g atm_wq_kb7nvz atm_tk_1tcgj5g dir dir-ltr'] (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: '4.11.0', revision: '040bc5406b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.128, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\abhin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58679}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58679/devtoo..., se:cdpVersion: 126.0.6478.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 29db4e75e0439fc9b5555f935997cbeb]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.128, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\abhin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61108}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61108/devtoo..., se:cdpVersion: 126.0.6478.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b274056815a14e39a151e6430805c917]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//span[@class='i3tjjh1 atm_mk_h2mmj6 dir dir-ltr'])[1] (tried for 10 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='c1lbtiq8 atm_mk_stnw88 atm_9s_1txwivl atm_fq_1tcgj5g atm_wq_kb7nvz atm_tk_1tcgj5g dir dir-ltr'] (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: '4.11.0', revision: '040bc5406b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.128, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\abhin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58679}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58679/devtoo..., se:cdpVersion: 126.0.6478.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 29db4e75e0439fc9b5555f935997cbeb
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.128, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\abhin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61108}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61108/devtoo..., se:cdpVersion: 126.0.6478.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b274056815a14e39a151e6430805c917
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-at airbnb_testing.Airbnb_Test.closingDialogBox(Airbnb_Test.java:98)
+at airbnb_testing.Airbnb_Test.closingDialogBox(Airbnb_Test.java:155)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
