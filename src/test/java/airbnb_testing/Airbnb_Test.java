@@ -90,7 +90,7 @@ public class Airbnb_Test {
 	}
 
 	@Test(dependsOnMethods = "invokeBrowser")
-	public void setLocation() {
+	public void setLocation() throws Exception{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
 		WebElement locationInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("bigsearch-query-location-input")));
@@ -105,7 +105,7 @@ public class Airbnb_Test {
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@data-testid='structured-search-input-field-dates-panel']")));
 
-		WebElement entryDate = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@data-testid='calendar-day-23/07/2024']")));
+		WebElement entryDate = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@data-testid='calendar-day-30/07/2024']")));
 		entryDate.click();
 
 		//=====--------------------------DATE - check_OUT-------------------------
@@ -113,11 +113,16 @@ public class Airbnb_Test {
 		checkInElementExit.click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@data-testid='structured-search-input-field-dates-panel']")));
 
-		WebElement exitDate = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@data-testid='calendar-day-27/07/2024']")));
+		WebElement exitDate = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@data-testid='calendar-day-31/07/2024']")));
 		exitDate.click();
-
-
+		
+		driver.findElement(By.xpath("//div[@class='cz9siyu atm_l8_srw7uq atm_ks_15vqwwr atm_mk_h2mmj6 atm_vv_1q9ccgz atm_vy_1osqo2v atm_wq_kb7nvz dir dir-ltr']//div[text()='Add guests']")).click();
+		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='coy2xq9 atm_mk_stnw88 atm_tk_1osqo2v atm_wq_kb7nvz atm_26_1p8m8iw atm_5j_1vi7ecw atm_70_z3lat3 atm_gp_1fwxnve atm_iy_1xor2vp atm_l0_15vqwwr atm_l1_1wugsn5 atm_l2_1f51e7f atm_lb_4n2dxu atm_lh_swyrjs atm_5sxl3l_16m390d__1v156lz r1p5mcc8 atm_n3_idpfg4 dir dir-ltr']")));
+		WebElement addingGuest = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@data-testid='stepper-adults-increase-button']")));
+		addingGuest.click();
 		driver.findElement(By.xpath("//span[@class='t1dqvypu atm_9s_1ulexfb atm_vy_1osqo2v atm_e2_1osqo2v atm_jb_uuw12j atm_2w_1egmwxu atm_k4_idpfg4 atm_uc_kn5pbq atm_2g_1mygper atm_k4_kb7nvz_1nos8r atm_uc_yz1f4_csw3t1 atm_k4_idpfg4_csw3t1 atm_tr_kftzq4_csw3t1 dir dir-ltr']")).click();
+		
 	}
 	
 	@Test(dependsOnMethods= "setLocation")
@@ -165,7 +170,6 @@ public class Airbnb_Test {
 //		WebElement increaseGuest = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@data-testid='stepper-adults-increase-button']")));
 //		increaseGuest.click();
 //	}
-	
 	
 	//    @AfterClass
 	public void tearDown() {
