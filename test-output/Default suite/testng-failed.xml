@@ -5,12 +5,12 @@
     <classes>
       <class name="airbnb_testing.Airbnb_Test">
         <methods>
+          <include name="closingPopUp"/>
           <include name="invokeBrowser"/>
           <include name="setUp"/>
           <include name="applyingFilter"/>
           <include name="bookingFirstHotel"/>
           <include name="setLocation"/>
-          <include name="closingDialogBox"/>
           <include name="changeLanguage"/>
         </methods>
       </class> <!-- airbnb_testing.Airbnb_Test -->
