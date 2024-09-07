@@ -159,19 +159,18 @@ public class Airbnb_Test {
 	 @Test(priority = 6, dependsOnMethods = "bookingFirstHotel")
 	    public void closingPopUp() {
 	        // Switch to the new window if a pop-up appears
-	        String mainWindow = driver.getWindowHandle();
+	        String mainWindow = driver.getWindowHandle();//hold the main window
 	        for (String windowHandle : driver.getWindowHandles()) {
 	            if (!windowHandle.equals(mainWindow)) {
 	                driver.switchTo().window(windowHandle);
 	                break;
 	            }
 	        }
-
 	        try {
 
 	    		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 	            WebElement closeButton = wait.until(ExpectedConditions.elementToBeClickable(
-	                By.xpath("//div[@role='dialog']//button[@type='button']/span")
+	                By.xpath("(//div/div/div/button/span[@class='i3tjjh1 atm_mk_h2mmj6 dir dir-ltr'])[3]")
 	            ));
 	            closeButton.click();
 	        } catch (TimeoutException e) {
