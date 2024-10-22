@@ -101,27 +101,42 @@ public class Airbnb_Test {
 		locationInput.clear();
 		locationInput.sendKeys("Kasol");
 
-		WebElement suggestion = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='s152dg4g atm_c8_2x1prs atm_fr_11a07z3 atm_cs_6adqpa atm_7l_dezgoh atm_g3_1jbyh58 atm_ks_15vqwwr atm_sq_1l2sidv atm_9s_cj1kg8 atm_6w_1e54zos atm_fy_ouytup atm_ks_zryt35__1rgatj2 dir dir-ltr']")));
+		WebElement suggestion = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id=\"bigsearch-query-location-suggestion-0\"]")));
 		suggestion.click();
+		
+		
+		
 		//---------------------------------------DATE - check_IN-----------
 		WebElement checkInElement = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@data-testid, 'structured-search-input-field-split-dates-0')]")));
 		checkInElement.click();
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@data-testid='structured-search-input-field-dates-panel']")));
 
-		WebElement entryDate = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@data-testid='calendar-day-26/09/2024']")));
+		WebElement entryDate = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@data-testid=\"22/10/2024\"]")));
 		entryDate.click();
+		
+		
+		
+		
 		
 		//=====--------------------------DATE - check_OUT-------------------------
 		WebElement checkInElementExit = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@data-testid, 'structured-search-input-field-split-dates-1')]")));
+		
 		checkInElementExit.click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@data-testid='structured-search-input-field-dates-panel']")));
 
-		WebElement exitDate = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@data-testid='calendar-day-30/09/2024']")));
+		WebElement exitDate = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@data-testid=\"22/10/2024\"]")));
 		exitDate.click();
+		
+		
+		
+		
+		
+		
+		
 		//-- Adding guest----------------
-		driver.findElement(By.xpath("//div[@class='cz9siyu atm_l8_srw7uq atm_ks_15vqwwr atm_mk_h2mmj6 atm_vv_1q9ccgz atm_vy_1osqo2v atm_wq_kb7nvz dir dir-ltr']//div[text()='Add guests']")).click();
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='coy2xq9 atm_mk_stnw88 atm_tk_1osqo2v atm_wq_kb7nvz atm_26_1p8m8iw atm_5j_1vi7ecw atm_70_z3lat3 atm_gp_1fwxnve atm_iy_1xor2vp atm_l0_15vqwwr atm_l1_1wugsn5 atm_l2_1f51e7f atm_lb_4n2dxu atm_lh_swyrjs atm_5sxl3l_16m390d__1v156lz r1p5mcc8 atm_n3_idpfg4 dir dir-ltr']")));
+		driver.findElement(By.xpath("//div/div[text()=\"Who\"]")).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@data-testid=\"structured-search-input-field-guests-panel\"]")));
 		WebElement addingGuest = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@data-testid='stepper-adults-increase-button']")));
 		addingGuest.click();
 		driver.findElement(By.xpath("//span[@class='t1dqvypu atm_9s_1ulexfb atm_vy_1osqo2v atm_e2_1osqo2v atm_jb_uuw12j atm_2w_1egmwxu atm_k4_idpfg4 atm_uc_kn5pbq atm_2g_1mygper atm_k4_kb7nvz_1nos8r atm_uc_yz1f4_csw3t1 atm_k4_idpfg4_csw3t1 atm_tr_kftzq4_csw3t1 dir dir-ltr']")).click();
@@ -143,7 +158,7 @@ public class Airbnb_Test {
 		WebElement languageCurrencyButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='lloffz7 atm_h_1h6ojuz atm_9s_1txwivl atm_e2_1osqo2v atm_mk_h2mmj6 atm_wq_kb7nvz dir dir-ltr']/div[@class='_z5mecy']")));
 		Thread.sleep(10000);
 		languageCurrencyButton.click();
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='p1psejvv atm_9s_1bgihbq dir dir-ltr']/div[@class='di536pa atm_ks_zryt35 atm_mk_h2mmj6 atm_26_1qwqy05 atm_vy_auwlz6 atm_j3_auwlz6 atm_iy_1osqo2v atm_9s_1txwivl atm_ar_1bp4okc atm_70_rgs8xj atm_6a_kitwna atm_6c_kitwna atm_16_kb7nvz atm_12_1hrf63d atm_1c_1kxd9fs atm_1k_1v897lg atm_y_t52gbv atm_tw_uaqxkr atm_im2n7a_1osqo2v atm_189k8xb_1osqo2v atm_ks_15vqwwr__1yj3dog atm_kd_glywfm_pfnrn2 atm_vy_1osqo2v__oggzyc atm_5j_kitwna__oggzyc atm_16_kb7nvz__oggzyc atm_12_1hrf63d__oggzyc atm_1c_1o0sogo__oggzyc atm_y_vegxqt__oggzyc atm_1k_so3mv5__oggzyc atm_tw_uaqxkr__oggzyc atm_im2n7a_n7od8j__oggzyc atm_189k8xb_n7od8j__oggzyc atm_1c_18bdofy__1rrf6b5 atm_y_t0utr__1rrf6b5 atm_1k_1ar7sfh__1rrf6b5 atm_j3_6tyhld__oggzyc dclclpo dir dir-ltr']")));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='p1psejvv atm_9s_1bgihbq dir dir-ltr']/div)[3]")));
 		driver.findElement(By.xpath("//div[text()='भारत']")).click();
 	}
 	
@@ -159,35 +174,33 @@ public class Airbnb_Test {
 	 @Test(priority = 6, dependsOnMethods = "bookingFirstHotel")
 	    public void closingPopUp() {
 	        // Switch to the new window if a pop-up appears
-	        String mainWindow = driver.getWindowHandle();//hold the main window
-	        for (String windowHandle : driver.getWindowHandles()) {
-	            if (!windowHandle.equals(mainWindow)) {
-	                driver.switchTo().window(windowHandle);
-	                break;
-	            }
-	        }
-	        try {
+//	        String mainWindow = driver.getWindowHandle();//hold the main window
+//	        for (String windowHandle : driver.getWindowHandles()) {
+//	            if (!windowHandle.equals(mainWindow)) {
+//	                driver.switchTo().window(windowHandle);
+//	                break;
+//	            }
+//	        }
+//	        try {
 
-	    		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+	    		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	            WebElement closeButton = wait.until(ExpectedConditions.elementToBeClickable(
 	                By.xpath("(//div/div/div/button/span[@class='i3tjjh1 atm_mk_h2mmj6 dir dir-ltr'])[3]")
 	            ));
 	            closeButton.click();
-	        } catch (TimeoutException e) {
-	        }
-
-	        driver.switchTo().window(mainWindow);
+//	        } catch (TimeoutException e) {
+//	        }
+//
+//	        driver.switchTo().window(mainWindow);
 	    }
+}
 	
 //	    @AfterClass
 //	public void tearDown()throws Exception {
 //	    	Thread.sleep(6000);		if (driver != null) {
 //			driver.quit();
 //		}
-	}
-
-
-
+	
 
 //@Test(dependsOnMethods = "bookingFirstHotel")
 //public void closingDialogBox() throws InterruptedException {
